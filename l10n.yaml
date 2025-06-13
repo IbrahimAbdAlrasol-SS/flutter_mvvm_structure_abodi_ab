@@ -1,4 +1,11 @@
+# مسار مجلد ملفات الترجمة
 arb-dir: lib/l10n
+
+# ملف القالب الأساسي للترجمة باللغة الإنجليزية
 template-arb-file: app_en.arb
+
+# مسار ملف الترجمة المُنشأ
 output-localization-file: app_localizations.dart
+
+# ملف لتخزين النصوص التي لم تتم ترجمتها
 untranslated-messages-file: untranslated_messages.txt

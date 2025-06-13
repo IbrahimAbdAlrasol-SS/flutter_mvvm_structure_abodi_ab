@@ -1,17 +1,24 @@
+# هذا ملف تكوين لتحليل الكود في مشروع Flutter
+# يحدد القواعد والإعدادات التي يجب اتباعها أثناء كتابة الكود
+
+# تضمين حزمة flutter_lints التي تحتوي على القواعد الأساسية
 include: package:flutter_lints/flutter.yaml
 
 analyzer:
+  # استبعاد الملفات المولدة تلقائياً من التحليل
   exclude:
-    - "**/*.g.dart"
-    - "**/*.freezed.dart"
+    - "**/*.g.dart"     # ملفات json_serializable المولدة
+    - "**/*.freezed.dart"   # ملفات freezed المولدة
 
+  # تكوين كيفية التعامل مع الأخطاء المختلفة
   errors:
-    invalid_annotation_target: ignore
-    unused_element: ignore
-    depend_on_referenced_packages: ignore
-    use_build_context_synchronously: ignore
-    require_trailing_commas: true
-    deprecated_member_use: ignore
+    invalid_annotation_target: ignore    # تجاهل أخطاء الـ annotations غير الصالحة
+    unused_element: ignore               # تجاهل العناصر غير المستخدمة
+    depend_on_referenced_packages: ignore # تجاهل تبعيات الحزم المرجعية
+    use_build_context_synchronously: ignore # تجاهل استخدام BuildContext بشكل متزامن
+    require_trailing_commas: true        # إلزام استخدام الفواصل النهائية
+    deprecated_member_use: ignore        # تجاهل استخدام العناصر المهملة
 
+  # إضافة البرامج المساعدة للتحليل
   plugins:
-    - custom_lint
+    - custom_lint    # إضافة أداة custom_lint للتحليل المخصص
